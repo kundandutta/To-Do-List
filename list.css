@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    margin: 0vw;
+    padding: 0vw;
+}
+#main{
+    border: 2px solid red;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+h1{
+    text-decoration: underline;
+}
+.submit{
+    background-color: orangered;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+#list{
+    border: 2px solid red;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
