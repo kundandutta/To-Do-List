@@ -24,3 +24,14 @@ h1{
     margin: auto;
     text-align: center;
 }
+.text{
+    border: 2px solid black;
+    border: 5px;
+}
+.ul{
+    display: block;
+}
+ul li :nth-child(even){
+    background-color: #878686;
+}
+ul{list-style-type: none;}
