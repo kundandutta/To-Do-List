@@ -2,14 +2,30 @@ function addData(list){
 
     var data =document.getElementById("box").value;
     var rules = ['']
-    document.getElementById("task1")
     for(var i=0; i<data.length; i++){
         rules += data[i].value;
     }
+    if(data ==""){
+        alert("Please fill it")
+    }
+    else{
+
     var li = document.createElement("li");
-    var rule = document.createTextNode(rules);
+    var rule = document.createTextNode(data);
     li.appendChild(rule);
     document.getElementById("list").appendChild(li);
-}
     
-        //if(data=== ""){alert("Please enter something" )}
+
+var removeBtn = document.createElement("input");
+removeBtn.type = "button";
+removeBtn.value = "Remove";
+removeBtn.onclick = remove;
+li.appendChild(removeBtn);
+document.getElementById("list").appendChild(li);
+}
+
+function remove(e) {
+var el = e.target;
+el.parentNode.remove();
+}
+}
