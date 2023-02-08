@@ -1,4 +1,4 @@
-function addData(list){
+function addData(listmain){
 
     var data =document.getElementById("box").value;
     var rules = ['']
@@ -13,19 +13,19 @@ function addData(list){
     var li = document.createElement("li");
     var rule = document.createTextNode(data);
     li.appendChild(rule);
-    document.getElementById("list").appendChild(li);
-    
+    document.getElementById("listmain").appendChild(li);   
 
 var removeBtn = document.createElement("input");
 removeBtn.type = "button";
 removeBtn.value = "Remove";
 removeBtn.onclick = remove;
 li.appendChild(removeBtn);
-document.getElementById("list").appendChild(li);
+document.getElementById("listmain").appendChild(li);
 }
 
 function remove(e) {
 var el = e.target;
 el.parentNode.remove();
 }
+document.getElementById("box").value = ""
 }

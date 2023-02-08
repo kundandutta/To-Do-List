@@ -31,9 +31,17 @@ h1{
 .ul{
     display: block;
 }
-ul li :nth-child(even){
+#listmain ul li :nth-child(even){
     background-color: #878686;
 }
 li{
     list-style-type: none;
+}
+#listmain{
+    border: 1px solid blue;
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    box-shadow: 4px 4px 4px 4px blue;
+    box-sizing:content-box;
 }
