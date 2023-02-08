@@ -1,31 +1,33 @@
-function addData(listmain){
+function addData(listmain) {
 
-    var data =document.getElementById("box").value;
+    var data = document.getElementById("box").value;
     var rules = ['']
-    for(var i=0; i<data.length; i++){
+    for (var i = 0; i < data.length; i++) {
         rules += data[i].value;
     }
-    if(data ==""){
+    if (data == "") {
         alert("Please fill it")
     }
-    else{
+    else {
+        var check = document.createElement("input")
+        check.type = "checkbox";
+        var li = document.createElement("li");
+        var rule = document.createTextNode(data);
+        li.appendChild(check);
+        li.appendChild(rule);
+        document.getElementById("listmain").appendChild(li);
 
-    var li = document.createElement("li");
-    var rule = document.createTextNode(data);
-    li.appendChild(rule);
-    document.getElementById("listmain").appendChild(li);   
+        var removeBtn = document.createElement("input");
+        removeBtn.type = "button";
+        removeBtn.value = "Remove";
+        removeBtn.onclick = remove;
+        li.appendChild(removeBtn);
+        document.getElementById("listmain").appendChild(li);
+    }
 
-var removeBtn = document.createElement("input");
-removeBtn.type = "button";
-removeBtn.value = "Remove";
-removeBtn.onclick = remove;
-li.appendChild(removeBtn);
-document.getElementById("listmain").appendChild(li);
-}
-
-function remove(e) {
-var el = e.target;
-el.parentNode.remove();
-}
-document.getElementById("box").value = ""
+    function remove(e) {
+        var el = e.target;
+        el.parentNode.remove();
+    
+    }
 }
