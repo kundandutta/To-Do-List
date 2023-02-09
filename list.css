@@ -24,7 +24,7 @@ h1 {
 
 #list {
     border: 2px solid red;
-    width: 30%;
+    width: 35%;
     margin: auto;
     text-align: center;
     background-color: aqua;
@@ -49,7 +49,7 @@ li:nth-child(odd) {
 
 #listmain {
     border: 1px solid blue;
-    width: 30%;
+    width: 35%;
     text-align: center;
     margin: auto;
     box-shadow: 4px 0px 4px 0px blue;

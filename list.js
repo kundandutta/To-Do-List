@@ -12,8 +12,9 @@ function addData(list) {
         var check = document.createElement("input");
         check.setAttribute('type', 'checkbox');
         check.setAttribute('id', data);
-        check.setAttribute('value', 'val' +data);
-        check.BoxClickFn = addfn()
+        check.setAttribute('value', 'val' + data);
+        check.setAttribute('class', 'classchk')
+        check.setAttribute('onclick', 'addfn()')
         var li = document.createElement("li");
         var rule = document.createTextNode(data);
         li.appendChild(check);
@@ -37,6 +38,9 @@ function remove(e) {
 
 }
 
-function checkBoxClickFn(check) {
-
+function addfn(e) {
+    var li = document.createElement('li');
+    var el = document.getElementsByClassName('classchk')
+    console.log(el.parentNode)
+    document.getElementById('taskadded').appendChild(el)
 }
