@@ -38,18 +38,38 @@ h1 {
 li {
     list-style-type: none;
 }
-li:nth-child(even){
+
+li:nth-child(even) {
     background-color: rgb(238, 176, 176);
 }
-li:nth-child(odd){
+
+li:nth-child(odd) {
     background-color: rgb(126, 212, 232);
 }
 
 #listmain {
     border: 1px solid blue;
-    width: 40%;
+    width: 30%;
     text-align: center;
     margin: auto;
     box-shadow: 4px 0px 4px 0px blue;
     box-sizing: content-box;
+}
+
+#taskadded {
+    border: 1px solid blue;
+    width: 30%;
+    float: left;
+    margin:auto;
+    position: static;
+    text-align: center;
+}
+
+#taskcomp {
+    border: 1px solid brown;
+    width: 30%;
+    float: right;
+    margin: auto;
+    position: relative;
+    text-align: center;
 }

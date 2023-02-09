@@ -1,4 +1,4 @@
-function addData(listmain) {
+function addData(list) {
 
     var data = document.getElementById("box").value;
     var rules = ['']
@@ -9,8 +9,11 @@ function addData(listmain) {
         alert("Please fill it")
     }
     else {
-        var check = document.createElement("input")
-        check.type = "checkbox";
+        var check = document.createElement("input");
+        check.setAttribute('type', 'checkbox');
+        check.setAttribute('id', data);
+        check.setAttribute('value', 'val' +data);
+        check.BoxClickFn = addfn()
         var li = document.createElement("li");
         var rule = document.createTextNode(data);
         li.appendChild(check);
@@ -25,10 +28,15 @@ function addData(listmain) {
         document.getElementById("listmain").appendChild(li);
     }
 
-    function remove(e) {
-        var el = e.target;
-        el.parentNode.remove();
-    
-    }
     document.getElementById("box").value = ""
+}
+function remove(e) {
+    var el = e.target;
+    console.log(el.parentNode)
+    el.parentNode.remove();
+
+}
+
+function checkBoxClickFn(check) {
+
 }
