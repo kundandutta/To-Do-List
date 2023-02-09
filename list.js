@@ -30,4 +30,5 @@ function addData(listmain) {
         el.parentNode.remove();
     
     }
+    document.getElementById("box").value = ""
 }
